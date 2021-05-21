@@ -10,8 +10,8 @@ with open("url-list.txt", "r") as file:
         line = line.rstrip()
         newline = '\t' + line
         newlines.append(newline)
-        newlines = newlines[:-1]
-        newlines.append("end")
+    newlines = newlines[:-1]
+    newlines.append("end")
 with open("clean-url-list.txt", "w") as newfile:
     newfile.write("\n".join(newlines))
 os.remove('url-list.txt')
